@@ -14,6 +14,21 @@ document.addEventListener('keydown',function(event){
                 nivel.muerto = false; 
              }
          }
+         if (event.key === 'Enter'){
+            console.log("salta");
+            if(nivel.muerto == false)
+               saltar();
+            else {
+               nivel.velocidad= 9;
+               nube.velocidad = 1;
+               nube2.velocidad = 1;
+               cactus.x = ancho +100;
+               nube.x = 400; 
+               nube2.x = 200;
+               nivel.marcador = 0;
+               nivel.muerto = false; 
+            }
+        }
 });
 document.addEventListener('touchstart',function(event){
     if(nivel.muerto == false)
